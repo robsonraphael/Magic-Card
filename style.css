@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e2021;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2%;
+}
+
+.card {
+  width: 280px;
+  height: 430px;
+
+  background-color: rgba(12, 13, 14, 1);
+  border-radius: 1rem;
+
+  margin-top: 2rem;
+  font-size: 0em;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-family: "Inter";
+  background-image: linear-gradient(220deg, #de728e, #8c72de);
+  background-clip: text;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+
+  position: absolute;
+  margin: 0 auto;
+}
+
+.text {
+  margin: 0 auto;
+  margin-top: 7%;
+
+  font-size: 1.2em;
+  font-family: "Inter";
+  font-weight: 300;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.card:hover {
+  transition: all ease-in-out 0.5s;
+  background-color: rgba(12, 13, 14, 0.6);
+  font-size: 1.1em;
+}
+
+.card:hover:before,
+.card:hover:after {
+  transition: ease-in 0.4s;
+  opacity: 0;
+}
+
+.card::before {
+  content: "";
+
+  width: 270px;
+  height: 440px;
+
+  border-radius: 4rem;
+
+  background: linear-gradient(75deg, #de728e 25%, #8c72de 100%);
+
+  filter: blur(10px);
+  animation: rotate-blob 3.5s linear infinite;
+
+  position: absolute;
+  z-index: -1;
+  opacity: 1;
+}
+
+@keyframes rotate-blob {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+}
+
+.card::after {
+  content: "";
+
+  width: 280px;
+  height: 440px;
+
+  border-radius: 4rem;
+  background: linear-gradient(75deg, #8c72de 25%, #de728e 100%);
+
+  position: absolute;
+  z-index: -1;
+
+  filter: blur(10px);
+  animation: rotate-blob2 4.5s linear infinite;
+  opacity: 1;
+}
+@keyframes rotate-blob2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(-12deg);
+  }
+}
