@@ -1,4 +1,4 @@
-# [Magic Card](https://robsonraphael.github.io/magic-card/)
+# [Magic Card](https://robsonraphael.github.io/Magic-Card/)
 Um Card Mágico inspirado em cards de jogos de cartas. Construido utilizando somente html e css.
 
 ## Tools 
